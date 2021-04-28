@@ -4,6 +4,7 @@ import { MartianRobotsSolver } from "./module/martian-robots-solver/martian-robo
 
 const fileSelector = document.getElementById("file-selector");
 fileSelector.addEventListener("change", (event) => {
+  console.log("Changed event called!");
   readFile(event);
 });
 
@@ -15,4 +16,5 @@ const readFile = async (event) => {
     robots: new MartianRobotsSolver({ input }).solve(),
   });
   document.querySelector(".result").innerText = output;
+  console.log(`Output: ${output}`);
 };
