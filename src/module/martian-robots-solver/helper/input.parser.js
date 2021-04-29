@@ -2,7 +2,7 @@ import { ProblemInput } from "../core/problem.input";
 
 export class InputParser {
   static fromString(input) {
-    const lines = input.split("\r\n");
+    const lines = input.split(/\r?\n/);
     const world = lines.shift();
     const [width, height] = world.split(" ");
 
